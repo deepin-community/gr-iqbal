@@ -1,0 +1,411 @@
+From 7caa2643e2a98c122e9d1b96f9c5e3fe05520fe9 Mon Sep 17 00:00:00 2001
+From: Sylvain Munaut <tnt@246tNt.com>
+Date: Fri, 8 Jan 2021 11:25:02 +0100
+Subject: [PATCH 5/9] gr39: Update copyright notices everywhere
+
+Signed-off-by: Sylvain Munaut <tnt@246tNt.com>
+---
+ CMakeLists.txt                            | 19 +++----------------
+ apps/CMakeLists.txt                       | 18 +++---------------
+ cmake/Modules/targetConfig.cmake.in       | 19 +++----------------
+ grc/CMakeLists.txt                        | 18 +++---------------
+ include/gnuradio/iqbalance/CMakeLists.txt | 18 +++---------------
+ include/gnuradio/iqbalance/api.h          | 20 ++++----------------
+ include/gnuradio/iqbalance/fix_cc.h       | 18 ++++--------------
+ include/gnuradio/iqbalance/optimize_c.h   | 18 ++++--------------
+ lib/CMakeLists.txt                        | 18 +++---------------
+ lib/fix_cc.cc                             | 17 +++--------------
+ lib/optimize_c.cc                         | 23 ++++++-----------------
+ python/CMakeLists.txt                     | 18 +++---------------
+ python/__init__.py                        | 20 +++-----------------
+ 13 files changed, 45 insertions(+), 199 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 3dbcd6d..f4d7341 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1,22 +1,9 @@
+-# Copyright 2011,2012 Free Software Foundation, Inc.
++# Copyright 2011-2020 Free Software Foundation, Inc.
++# Copyright 2013-2021 Sylvain Munaut <tnt@246tNt.com>
+ #
+ # This file is part of gr-iqbalance
+ #
+-# gr-iqbalance is free software; you can redistribute it and/or modify
+-# it under the terms of the GNU General Public License as published by
+-# the Free Software Foundation; either version 3, or (at your option)
+-# any later version.
+-#
+-# gr-iqbalance is distributed in the hope that it will be useful,
+-# but WITHOUT ANY WARRANTY; without even the implied warranty of
+-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-# GNU General Public License for more details.
+-#
+-# You should have received a copy of the GNU General Public License
+-# along with gr-iqbalance; see the file COPYING.  If not, write to
+-# the Free Software Foundation, Inc., 51 Franklin Street,
+-# Boston, MA 02110-1301, USA.
+-
++# SPDX-License-Identifier: GPL-3.0-or-later
+ 
+ ########################################################################
+ # Project setup
+diff --git a/apps/CMakeLists.txt b/apps/CMakeLists.txt
+index 7c30f1a..7746f51 100644
+--- a/apps/CMakeLists.txt
++++ b/apps/CMakeLists.txt
+@@ -1,21 +1,9 @@
+-# Copyright 2011 Free Software Foundation, Inc.
++# Copyright 2011-2020 Free Software Foundation, Inc.
++# Copyright 2013-2021 Sylvain Munaut <tnt@246tNt.com>
+ #
+ # This file is part of gr-iqbalance
+ #
+-# gr-iqbalance is free software; you can redistribute it and/or modify
+-# it under the terms of the GNU General Public License as published by
+-# the Free Software Foundation; either version 3, or (at your option)
+-# any later version.
+-#
+-# gr-iqbalance is distributed in the hope that it will be useful,
+-# but WITHOUT ANY WARRANTY; without even the implied warranty of
+-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-# GNU General Public License for more details.
+-#
+-# You should have received a copy of the GNU General Public License
+-# along with gr-iqbalance; see the file COPYING.  If not, write to
+-# the Free Software Foundation, Inc., 51 Franklin Street,
+-# Boston, MA 02110-1301, USA.
++# SPDX-License-Identifier: GPL-3.0-or-later
+ 
+ include(GrPython)
+ 
+diff --git a/cmake/Modules/targetConfig.cmake.in b/cmake/Modules/targetConfig.cmake.in
+index 79e4a28..c838b74 100644
+--- a/cmake/Modules/targetConfig.cmake.in
++++ b/cmake/Modules/targetConfig.cmake.in
+@@ -1,21 +1,8 @@
+-# Copyright 2018 Free Software Foundation, Inc.
++# Copyright 2011-2020 Free Software Foundation, Inc.
+ #
+-# This file is part of GNU Radio
++# This file is part of gr-iqbalance
+ #
+-# GNU Radio is free software; you can redistribute it and/or modify
+-# it under the terms of the GNU General Public License as published by
+-# the Free Software Foundation; either version 3, or (at your option)
+-# any later version.
+-#
+-# GNU Radio is distributed in the hope that it will be useful,
+-# but WITHOUT ANY WARRANTY; without even the implied warranty of
+-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-# GNU General Public License for more details.
+-#
+-# You should have received a copy of the GNU General Public License
+-# along with GNU Radio; see the file COPYING.  If not, write to
+-# the Free Software Foundation, Inc., 51 Franklin Street,
+-# Boston, MA 02110-1301, USA.
++# SPDX-License-Identifier: GPL-3.0-or-later
+ 
+ include(CMakeFindDependencyMacro)
+ 
+diff --git a/grc/CMakeLists.txt b/grc/CMakeLists.txt
+index a11692f..a57431f 100644
+--- a/grc/CMakeLists.txt
++++ b/grc/CMakeLists.txt
+@@ -1,21 +1,9 @@
+-# Copyright 2011 Free Software Foundation, Inc.
++# Copyright 2011-2020 Free Software Foundation, Inc.
++# Copyright 2013-2021 Sylvain Munaut <tnt@246tNt.com>
+ #
+ # This file is part of gr-iqbalance
+ #
+-# gr-iqbalance is free software; you can redistribute it and/or modify
+-# it under the terms of the GNU General Public License as published by
+-# the Free Software Foundation; either version 3, or (at your option)
+-# any later version.
+-#
+-# gr-iqbalance is distributed in the hope that it will be useful,
+-# but WITHOUT ANY WARRANTY; without even the implied warranty of
+-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-# GNU General Public License for more details.
+-#
+-# You should have received a copy of the GNU General Public License
+-# along with gr-iqbalance; see the file COPYING.  If not, write to
+-# the Free Software Foundation, Inc., 51 Franklin Street,
+-# Boston, MA 02110-1301, USA.
++# SPDX-License-Identifier: GPL-3.0-or-later
+ 
+ install(FILES
+     iqbalance_fix_cc.block.yml
+diff --git a/include/gnuradio/iqbalance/CMakeLists.txt b/include/gnuradio/iqbalance/CMakeLists.txt
+index 260bb23..3c03dd8 100644
+--- a/include/gnuradio/iqbalance/CMakeLists.txt
++++ b/include/gnuradio/iqbalance/CMakeLists.txt
+@@ -1,21 +1,9 @@
+-# Copyright 2011,2012 Free Software Foundation, Inc.
++# Copyright 2011-2020 Free Software Foundation, Inc.
++# Copyright 2013-2021 Sylvain Munaut <tnt@246tNt.com>
+ #
+ # This file is part of gr-iqbalance
+ #
+-# gr-iqbalance is free software; you can redistribute it and/or modify
+-# it under the terms of the GNU General Public License as published by
+-# the Free Software Foundation; either version 3, or (at your option)
+-# any later version.
+-#
+-# gr-iqbalance is distributed in the hope that it will be useful,
+-# but WITHOUT ANY WARRANTY; without even the implied warranty of
+-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-# GNU General Public License for more details.
+-#
+-# You should have received a copy of the GNU General Public License
+-# along with gr-iqbalance; see the file COPYING.  If not, write to
+-# the Free Software Foundation, Inc., 51 Franklin Street,
+-# Boston, MA 02110-1301, USA.
++# SPDX-License-Identifier: GPL-3.0-or-later
+ 
+ ########################################################################
+ # Install public header files
+diff --git a/include/gnuradio/iqbalance/api.h b/include/gnuradio/iqbalance/api.h
+index eb3b635..7db7647 100644
+--- a/include/gnuradio/iqbalance/api.h
++++ b/include/gnuradio/iqbalance/api.h
+@@ -1,22 +1,10 @@
+ /*
+- * Copyright 2011 Free Software Foundation, Inc.
++ * Copyright 2011-2020 Free Software Foundation, Inc.
++ * Copyright 2013-2021 Sylvain Munaut <tnt@246tNt.com>
+  *
+- * This file is part of GNU Radio
++ * This file is part of gr-iqbalance
+  *
+- * GNU Radio is free software; you can redistribute it and/or modify
+- * it under the terms of the GNU General Public License as published by
+- * the Free Software Foundation; either version 3, or (at your option)
+- * any later version.
+- *
+- * GNU Radio is distributed in the hope that it will be useful,
+- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- * GNU General Public License for more details.
+- *
+- * You should have received a copy of the GNU General Public License
+- * along with GNU Radio; see the file COPYING.  If not, write to
+- * the Free Software Foundation, Inc., 51 Franklin Street,
+- * Boston, MA 02110-1301, USA.
++ * SPDX-License-Identifier: GPL-3.0-or-later
+  */
+ 
+ #pragma once
+diff --git a/include/gnuradio/iqbalance/fix_cc.h b/include/gnuradio/iqbalance/fix_cc.h
+index f2bb333..34a99b4 100644
+--- a/include/gnuradio/iqbalance/fix_cc.h
++++ b/include/gnuradio/iqbalance/fix_cc.h
+@@ -1,21 +1,11 @@
+ /* -*- c++ -*- */
+ /*
+- * Copyright 2013  Sylvain Munaut <tnt@246tNt.com>
++ * Copyright 2011-2020 Free Software Foundation, Inc.
++ * Copyright 2013-2021 Sylvain Munaut <tnt@246tNt.com>
+  *
+- * This is free software; you can redistribute it and/or modify
+- * it under the terms of the GNU General Public License as published by
+- * the Free Software Foundation; either version 3, or (at your option)
+- * any later version.
++ * This file is part of gr-iqbalance
+  *
+- * This software is distributed in the hope that it will be useful,
+- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- * GNU General Public License for more details.
+- *
+- * You should have received a copy of the GNU General Public License
+- * along with this software; see the file COPYING.  If not, write to
+- * the Free Software Foundation, Inc., 51 Franklin Street,
+- * Boston, MA 02110-1301, USA.
++ * SPDX-License-Identifier: GPL-3.0-or-later
+  */
+ 
+ #pragma once
+diff --git a/include/gnuradio/iqbalance/optimize_c.h b/include/gnuradio/iqbalance/optimize_c.h
+index f614036..9b378af 100644
+--- a/include/gnuradio/iqbalance/optimize_c.h
++++ b/include/gnuradio/iqbalance/optimize_c.h
+@@ -1,21 +1,11 @@
+ /* -*- c++ -*- */
+ /*
+- * Copyright 2013  Sylvain Munaut <tnt@246tNt.com>
++ * Copyright 2011-2020 Free Software Foundation, Inc.
++ * Copyright 2013-2021 Sylvain Munaut <tnt@246tNt.com>
+  *
+- * This is free software; you can redistribute it and/or modify
+- * it under the terms of the GNU General Public License as published by
+- * the Free Software Foundation; either version 3, or (at your option)
+- * any later version.
++ * This file is part of gr-iqbalance
+  *
+- * This software is distributed in the hope that it will be useful,
+- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- * GNU General Public License for more details.
+- *
+- * You should have received a copy of the GNU General Public License
+- * along with this software; see the file COPYING.  If not, write to
+- * the Free Software Foundation, Inc., 51 Franklin Street,
+- * Boston, MA 02110-1301, USA.
++ * SPDX-License-Identifier: GPL-3.0-or-later
+  */
+ 
+ #pragma once
+diff --git a/lib/CMakeLists.txt b/lib/CMakeLists.txt
+index b6ee32d..789ccb1 100644
+--- a/lib/CMakeLists.txt
++++ b/lib/CMakeLists.txt
+@@ -1,21 +1,9 @@
+-# Copyright 2011 Free Software Foundation, Inc.
++# Copyright 2011-2020 Free Software Foundation, Inc.
++# Copyright 2013-2021 Sylvain Munaut <tnt@246tNt.com>
+ #
+ # This file is part of gr-iqbalance
+ #
+-# gr-iqbalance is free software; you can redistribute it and/or modify
+-# it under the terms of the GNU General Public License as published by
+-# the Free Software Foundation; either version 3, or (at your option)
+-# any later version.
+-#
+-# gr-iqbalance is distributed in the hope that it will be useful,
+-# but WITHOUT ANY WARRANTY; without even the implied warranty of
+-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-# GNU General Public License for more details.
+-#
+-# You should have received a copy of the GNU General Public License
+-# along with gr-iqbalance; see the file COPYING.  If not, write to
+-# the Free Software Foundation, Inc., 51 Franklin Street,
+-# Boston, MA 02110-1301, USA.
++# SPDX-License-Identifier: GPL-3.0-or-later
+ 
+ ########################################################################
+ # Setup library
+diff --git a/lib/fix_cc.cc b/lib/fix_cc.cc
+index af79d7d..4402a32 100644
+--- a/lib/fix_cc.cc
++++ b/lib/fix_cc.cc
+@@ -1,21 +1,10 @@
+ /* -*- c++ -*- */
+ /*
+- * Copyright 2013  Sylvain Munaut <tnt@246tNt.com>
++ * Copyright 2013-2021 Sylvain Munaut <tnt@246tNt.com>
+  *
+- * This is free software; you can redistribute it and/or modify
+- * it under the terms of the GNU General Public License as published by
+- * the Free Software Foundation; either version 3, or (at your option)
+- * any later version.
++ * This file is part of gr-iqbalance
+  *
+- * This software is distributed in the hope that it will be useful,
+- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- * GNU General Public License for more details.
+- *
+- * You should have received a copy of the GNU General Public License
+- * along with this software; see the file COPYING.  If not, write to
+- * the Free Software Foundation, Inc., 51 Franklin Street,
+- * Boston, MA 02110-1301, USA.
++ * SPDX-License-Identifier: GPL-3.0-or-later
+  */
+ 
+ #ifdef HAVE_CONFIG_H
+diff --git a/lib/optimize_c.cc b/lib/optimize_c.cc
+index 6c8b706..dd35b6a 100644
+--- a/lib/optimize_c.cc
++++ b/lib/optimize_c.cc
+@@ -1,21 +1,10 @@
+ /* -*- c++ -*- */
+-/* 
+- * Copyright 2013  Sylvain Munaut <tnt@246tNt.com>
+- * 
+- * This is free software; you can redistribute it and/or modify
+- * it under the terms of the GNU General Public License as published by
+- * the Free Software Foundation; either version 3, or (at your option)
+- * any later version.
+- * 
+- * This software is distributed in the hope that it will be useful,
+- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- * GNU General Public License for more details.
+- * 
+- * You should have received a copy of the GNU General Public License
+- * along with this software; see the file COPYING.  If not, write to
+- * the Free Software Foundation, Inc., 51 Franklin Street,
+- * Boston, MA 02110-1301, USA.
++/*
++ * Copyright 2013-2021 Sylvain Munaut <tnt@246tNt.com>
++ *
++ * This file is part of gr-iqbalance
++ *
++ * SPDX-License-Identifier: GPL-3.0-or-later
+  */
+ 
+ #ifdef HAVE_CONFIG_H
+diff --git a/python/CMakeLists.txt b/python/CMakeLists.txt
+index 878420c..6730db5 100644
+--- a/python/CMakeLists.txt
++++ b/python/CMakeLists.txt
+@@ -1,21 +1,9 @@
+-# Copyright 2011 Free Software Foundation, Inc.
++# Copyright 2011-2020 Free Software Foundation, Inc.
++# Copyright 2013-2021 Sylvain Munaut <tnt@246tNt.com>
+ #
+ # This file is part of gr-iqbalance
+ #
+-# gr-iqbalance is free software; you can redistribute it and/or modify
+-# it under the terms of the GNU General Public License as published by
+-# the Free Software Foundation; either version 3, or (at your option)
+-# any later version.
+-#
+-# gr-iqbalance is distributed in the hope that it will be useful,
+-# but WITHOUT ANY WARRANTY; without even the implied warranty of
+-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-# GNU General Public License for more details.
+-#
+-# You should have received a copy of the GNU General Public License
+-# along with gr-iqbalance; see the file COPYING.  If not, write to
+-# the Free Software Foundation, Inc., 51 Franklin Street,
+-# Boston, MA 02110-1301, USA.
++# SPDX-License-Identifier: GPL-3.0-or-later
+ 
+ ########################################################################
+ # Include python install macros
+diff --git a/python/__init__.py b/python/__init__.py
+index a71514f..4c5ba74 100644
+--- a/python/__init__.py
++++ b/python/__init__.py
+@@ -1,22 +1,8 @@
++# Copyright 2013-2021 Sylvain Munaut <tnt@246tNt.com>
+ #
+-# Copyright 2008,2009 Free Software Foundation, Inc.
++# This file is part of gr-iqbalance
+ #
+-# This application is free software; you can redistribute it and/or modify
+-# it under the terms of the GNU General Public License as published by
+-# the Free Software Foundation; either version 3, or (at your option)
+-# any later version.
+-#
+-# This application is distributed in the hope that it will be useful,
+-# but WITHOUT ANY WARRANTY; without even the implied warranty of
+-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-# GNU General Public License for more details.
+-#
+-# You should have received a copy of the GNU General Public License along
+-# with this program; if not, write to the Free Software Foundation, Inc.,
+-# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+-#
+-
+-# The presence of this file turns this directory into a Python package
++# SPDX-License-Identifier: GPL-3.0-or-later
+ 
+ '''
+ This is the GNU Radio IQBALANCE module. Place your Python package
+-- 
+2.30.2
+

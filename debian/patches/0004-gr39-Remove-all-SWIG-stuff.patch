@@ -1,0 +1,141 @@
+From acb81c653749ba46f6c43169e9c5fa24916f8ce5 Mon Sep 17 00:00:00 2001
+From: Sylvain Munaut <tnt@246tNt.com>
+Date: Fri, 8 Jan 2021 11:22:50 +0100
+Subject: [PATCH 4/9] gr39: Remove all SWIG stuff
+
+Signed-off-by: Sylvain Munaut <tnt@246tNt.com>
+---
+ CMakeLists.txt        |  1 -
+ python/CMakeLists.txt |  1 -
+ python/__init__.py    |  5 ----
+ swig/CMakeLists.txt   | 57 -------------------------------------------
+ swig/iqbalance_swig.i | 20 ---------------
+ 5 files changed, 84 deletions(-)
+ delete mode 100644 swig/CMakeLists.txt
+ delete mode 100644 swig/iqbalance_swig.i
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 1e8c0a5..3dbcd6d 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -176,6 +176,5 @@ add_subdirectory(include/gnuradio/iqbalance)
+ add_subdirectory(lib)
+ add_subdirectory(apps)
+ add_subdirectory(docs)
+-add_subdirectory(swig)
+ add_subdirectory(python)
+ add_subdirectory(grc)
+diff --git a/python/CMakeLists.txt b/python/CMakeLists.txt
+index 4df61d4..878420c 100644
+--- a/python/CMakeLists.txt
++++ b/python/CMakeLists.txt
+@@ -40,4 +40,3 @@ GR_PYTHON_INSTALL(
+ include(GrTest)
+ 
+ set(GR_TEST_TARGET_DEPS gnuradio-iqbalance)
+-set(GR_TEST_PYTHON_DIRS ${CMAKE_BINARY_DIR}/swig)
+diff --git a/python/__init__.py b/python/__init__.py
+index 36e4bbc..a71514f 100644
+--- a/python/__init__.py
++++ b/python/__init__.py
+@@ -23,8 +23,3 @@ This is the GNU Radio IQBALANCE module. Place your Python package
+ description here (python/__init__.py).
+ '''
+ 
+-# import swig generated symbols into the iqbalance namespace
+-from .iqbalance_swig import *
+-
+-# import any pure python here
+-#
+diff --git a/swig/CMakeLists.txt b/swig/CMakeLists.txt
+deleted file mode 100644
+index 7196cfe..0000000
+--- a/swig/CMakeLists.txt
++++ /dev/null
+@@ -1,57 +0,0 @@
+-# Copyright 2011 Free Software Foundation, Inc.
+-#
+-# This file is part of gr-iqbalance
+-#
+-# gr-iqbalance is free software; you can redistribute it and/or modify
+-# it under the terms of the GNU General Public License as published by
+-# the Free Software Foundation; either version 3, or (at your option)
+-# any later version.
+-#
+-# gr-iqbalance is distributed in the hope that it will be useful,
+-# but WITHOUT ANY WARRANTY; without even the implied warranty of
+-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-# GNU General Public License for more details.
+-#
+-# You should have received a copy of the GNU General Public License
+-# along with gr-iqbalance; see the file COPYING.  If not, write to
+-# the Free Software Foundation, Inc., 51 Franklin Street,
+-# Boston, MA 02110-1301, USA.
+-
+-########################################################################
+-# Include swig generation macros
+-########################################################################
+-find_package(SWIG)
+-find_package(PythonLibs 3)
+-if(NOT SWIG_FOUND OR NOT PYTHONLIBS_FOUND)
+-    return()
+-endif()
+-include(GrSwig)
+-include(GrPython)
+-
+-########################################################################
+-# Setup swig generation
+-########################################################################
+-set(GR_SWIG_INCLUDE_DIRS $<TARGET_PROPERTY:gnuradio::runtime_swig,INTERFACE_INCLUDE_DIRECTORIES>)
+-set(GR_SWIG_TARGET_DEPS gnuradio::runtime_swig)
+-
+-set(GR_SWIG_LIBRARIES gnuradio-iqbalance)
+-
+-set(GR_SWIG_DOC_FILE ${CMAKE_CURRENT_BINARY_DIR}/iqbalance_swig_doc.i)
+-set(GR_SWIG_DOC_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/../include/gnuradio/iqbalance)
+-
+-GR_SWIG_MAKE(iqbalance_swig iqbalance_swig.i)
+-
+-########################################################################
+-# Install the build swig module
+-########################################################################
+-GR_SWIG_INSTALL(TARGETS iqbalance_swig DESTINATION ${GR_PYTHON_DIR}/gnuradio/iqbalance)
+-
+-########################################################################
+-# Install swig .i files for development
+-########################################################################
+-install(
+-    FILES
+-    iqbalance_swig.i
+-    ${CMAKE_CURRENT_BINARY_DIR}/iqbalance_swig_doc.i
+-    DESTINATION ${GR_INCLUDE_DIR}/gnuradio/swig
+-)
+diff --git a/swig/iqbalance_swig.i b/swig/iqbalance_swig.i
+deleted file mode 100644
+index ef34576..0000000
+--- a/swig/iqbalance_swig.i
++++ /dev/null
+@@ -1,20 +0,0 @@
+-/* -*- c++ -*- */
+-
+-#define IQBALANCE_API
+-
+-%include "gnuradio.i"			// the common stuff
+-
+-//load generated python docstrings
+-%include "iqbalance_swig_doc.i"
+-
+-
+-%{
+-#include "gnuradio/iqbalance/fix_cc.h"
+-#include "gnuradio/iqbalance/optimize_c.h"
+-%}
+-
+-%include "gnuradio/iqbalance/fix_cc.h"
+-GR_SWIG_BLOCK_MAGIC2(iqbalance, fix_cc);
+-
+-%include "gnuradio/iqbalance/optimize_c.h"
+-GR_SWIG_BLOCK_MAGIC2(iqbalance, optimize_c);
+-- 
+2.30.2
+

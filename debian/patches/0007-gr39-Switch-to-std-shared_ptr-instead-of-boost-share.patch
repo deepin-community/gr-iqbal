@@ -1,0 +1,41 @@
+From 18895c4a61177ca403a1d34c9a17d46e95599162 Mon Sep 17 00:00:00 2001
+From: Sylvain Munaut <tnt@246tNt.com>
+Date: Fri, 8 Jan 2021 11:36:44 +0100
+Subject: [PATCH 7/9] gr39: Switch to std::shared_ptr instead of
+ boost::shared_ptr
+
+Signed-off-by: Sylvain Munaut <tnt@246tNt.com>
+---
+ include/gnuradio/iqbalance/fix_cc.h     | 2 +-
+ include/gnuradio/iqbalance/optimize_c.h | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/include/gnuradio/iqbalance/fix_cc.h b/include/gnuradio/iqbalance/fix_cc.h
+index 34a99b4..bf40982 100644
+--- a/include/gnuradio/iqbalance/fix_cc.h
++++ b/include/gnuradio/iqbalance/fix_cc.h
+@@ -24,7 +24,7 @@ namespace gr {
+       float d_mag, d_phase;
+ 
+      public:
+-      typedef boost::shared_ptr<fix_cc> sptr;
++      typedef std::shared_ptr<fix_cc> sptr;
+ 
+       static sptr make(float mag=0.0f, float phase=0.0f);
+ 
+diff --git a/include/gnuradio/iqbalance/optimize_c.h b/include/gnuradio/iqbalance/optimize_c.h
+index 9b378af..24688de 100644
+--- a/include/gnuradio/iqbalance/optimize_c.h
++++ b/include/gnuradio/iqbalance/optimize_c.h
+@@ -26,7 +26,7 @@ namespace gr {
+       float d_mag, d_phase;
+ 
+      public:
+-      typedef boost::shared_ptr<optimize_c> sptr;
++      typedef std::shared_ptr<optimize_c> sptr;
+ 
+       static sptr make(int period=0);
+ 
+-- 
+2.30.2
+

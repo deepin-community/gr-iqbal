@@ -1,5 +1,142 @@
-template-repository (1.0-1) unstable; urgency=medium
+gr-iqbal (0.38.2-2) unstable; urgency=medium
 
-  * Initial release
+  * upload to unstable
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- A. Maitland Bottoms <bottoms@debian.org>  Thu, 09 Dec 2021 19:58:00 -0500
+
+gr-iqbal (0.38.2-1) experimental; urgency=medium
+
+  * New upstream
+  * update to v0.38.2-9-gfbee239 for gnuradio 3.9
+  * Modern CMake, so no .pc file for pkg-config
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Tue, 09 Nov 2021 23:54:46 -0500
+
+gr-iqbal (0.38-4) unstable; urgency=medium
+
+  * depend upon dh-python since python3-dev no longer does (Closes: #948938)
+    thanks peter!
+  * also add depends on liborc-0.4-dev
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Tue, 14 Jan 2020 23:26:33 -0500
+
+gr-iqbal (0.38-3) unstable; urgency=medium
+
+  * Better description and fixed link (Closes: #927253)
+  * upload to unstable
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Wed, 28 Aug 2019 18:56:08 -0400
+
+gr-iqbal (0.38-2) experimental; urgency=medium
+
+  * Fix yaml syntax
+  * sumbit patches upstream
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Sun, 25 Aug 2019 20:10:11 -0400
+
+gr-iqbal (0.38-1) experimental; urgency=medium
+
+  * New for gnuradio 3.8
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Fri, 16 Aug 2019 21:26:28 -0400
+
+gr-iqbal (0.37.2-11) unstable; urgency=medium
+
+  * Fix conflicts/replaces lines - thanks anbe (Closes: #880906)
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Tue, 14 Nov 2017 23:44:07 -0500
+
+gr-iqbal (0.37.2-10) unstable; urgency=medium
+
+  * Add conflicts/replaces lines (Closes: #875787)
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Sat, 16 Sep 2017 03:53:56 -0400
+
+gr-iqbal (0.37.2-9) unstable; urgency=medium
+
+  * install .pc file correctly (Closes: #875787)
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Thu, 14 Sep 2017 17:43:35 -0400
+
+gr-iqbal (0.37.2-8) unstable; urgency=medium
+
+  * build with gnuradio 3.7.11
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Sun, 03 Sep 2017 23:41:06 -0400
+
+gr-iqbal (0.37.2-7) unstable; urgency=medium
+
+  * Breaks/Replaces older library packages (Closes: #830755, #830786)
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Mon, 11 Jul 2016 22:05:02 -0400
+
+gr-iqbal (0.37.2-6) unstable; urgency=medium
+
+  * update to v0.37.2-3-gdcd73fd
+  * build with gnuradio 3.7.10
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Sat, 09 Jul 2016 16:24:31 -0400
+
+gr-iqbal (0.37.2-5) unstable; urgency=medium
+
+  * build with gnuradio 3.7.9
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Sat, 09 Jan 2016 11:10:28 -0500
+
+gr-iqbal (0.37.2-4) unstable; urgency=medium
+
+  * de-duplicate copyright entries
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Sat, 28 Nov 2015 22:29:28 -0500
+
+gr-iqbal (0.37.2-3) unstable; urgency=medium
+
+  * Lintian packaging cleanups
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Fri, 27 Nov 2015 20:40:26 -0500
+
+gr-iqbal (0.37.2-2) unstable; urgency=low
+
+  * build with gnuradio 3.7.8
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Sat, 15 Aug 2015 22:18:22 -0400
+
+gr-iqbal (0.37.2-1) unstable; urgency=low
+
+  * New upstream tag, update to v0.37.2-2-g44ab02f
+  * build with gnuradio 3.7.5
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Wed, 03 Sep 2014 00:51:53 -0400
+
+gr-iqbal (0.37.1.5.d4fd4d-3) unstable; urgency=low
+
+  * rebuild with gnuradio 3.7.4
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Wed, 27 Aug 2014 01:06:34 -0400
+
+gr-iqbal (0.37.1.5.d4fd4d-2) unstable; urgency=low
+
+  * reduce boost dependencies to system and test components
+  * add doxygen and python dependencies
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Fri, 18 Apr 2014 19:15:33 -0400
+
+gr-iqbal (0.37.1.5.d4fd4d-1~bpo70+1) wheezy-backports; urgency=low
+
+  * Rebuild for wheezy-backports.
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Sat, 01 Feb 2014 21:28:26 -0500
+
+gr-iqbal (0.37.1.5.d4fd4d-1) unstable; urgency=low
+
+  * latest upstream commit, use with gnuradio 3.7.2.1
+    uses libosmo-dsp commit 59e29c
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Sun, 29 Dec 2013 10:56:16 -0500
+
+gr-iqbal (0.37.1.4.a1bca1f9-1) unstable; urgency=low
+
+  * New upstream snapshot (Closes: #725843).
+  * Match GNU Radio live distribution version
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Sat, 28 Sep 2013 22:55:08 -0400

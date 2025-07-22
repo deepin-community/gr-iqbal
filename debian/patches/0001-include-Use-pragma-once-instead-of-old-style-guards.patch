@@ -1,0 +1,79 @@
+From 96dd2541e00a483f026f9706042f7a4c8639a9e2 Mon Sep 17 00:00:00 2001
+From: Sylvain Munaut <tnt@246tNt.com>
+Date: Fri, 8 Jan 2021 11:34:15 +0100
+Subject: [PATCH 1/9] include: Use #pragma once instead of old style guards
+
+Signed-off-by: Sylvain Munaut <tnt@246tNt.com>
+---
+ include/gnuradio/iqbalance/api.h        | 5 +----
+ include/gnuradio/iqbalance/fix_cc.h     | 7 +------
+ include/gnuradio/iqbalance/optimize_c.h | 7 +------
+ 3 files changed, 3 insertions(+), 16 deletions(-)
+
+diff --git a/include/gnuradio/iqbalance/api.h b/include/gnuradio/iqbalance/api.h
+index 6a25660..eb3b635 100644
+--- a/include/gnuradio/iqbalance/api.h
++++ b/include/gnuradio/iqbalance/api.h
+@@ -19,8 +19,7 @@
+  * Boston, MA 02110-1301, USA.
+  */
+ 
+-#ifndef INCLUDED_IQBALANCE_API_H
+-#define INCLUDED_IQBALANCE_API_H
++#pragma once
+ 
+ #include <gnuradio/attributes.h>
+ 
+@@ -29,5 +28,3 @@
+ #else
+ #  define IQBALANCE_API __GR_ATTR_IMPORT
+ #endif
+-
+-#endif /* INCLUDED_IQBALANCE_API_H */
+diff --git a/include/gnuradio/iqbalance/fix_cc.h b/include/gnuradio/iqbalance/fix_cc.h
+index 30f4e3b..f2bb333 100644
+--- a/include/gnuradio/iqbalance/fix_cc.h
++++ b/include/gnuradio/iqbalance/fix_cc.h
+@@ -18,9 +18,7 @@
+  * Boston, MA 02110-1301, USA.
+  */
+ 
+-
+-#ifndef INCLUDED_IQBALANCE_FIX_CC_H
+-#define INCLUDED_IQBALANCE_FIX_CC_H
++#pragma once
+ 
+ #include <gnuradio/iqbalance/api.h>
+ #include <gnuradio/sync_block.h>
+@@ -57,6 +55,3 @@ namespace gr {
+ 
+   } // namespace iqbalance
+ } // namespace gr
+-
+-#endif /* INCLUDED_IQBALANCE_FIX_CC_H */
+-
+diff --git a/include/gnuradio/iqbalance/optimize_c.h b/include/gnuradio/iqbalance/optimize_c.h
+index ed97c07..f614036 100644
+--- a/include/gnuradio/iqbalance/optimize_c.h
++++ b/include/gnuradio/iqbalance/optimize_c.h
+@@ -18,9 +18,7 @@
+  * Boston, MA 02110-1301, USA.
+  */
+ 
+-
+-#ifndef INCLUDED_IQBALANCE_OPTIMIZE_C_H
+-#define INCLUDED_IQBALANCE_OPTIMIZE_C_H
++#pragma once
+ 
+ #include <gnuradio/iqbalance/api.h>
+ #include <gnuradio/sync_block.h>
+@@ -65,6 +63,3 @@ namespace gr {
+ 
+   } // namespace iqbalance
+ } // namespace gr
+-
+-#endif /* INCLUDED_IQBALANCE_OPTIMIZE_C_H */
+-
+-- 
+2.30.2
+

@@ -1,0 +1,12 @@
+0001-include-Use-pragma-once-instead-of-old-style-guards.patch
+0002-python-Remove-useless-test-code.patch
+0003-gr39-Update-the-whole-Doxygen-setup.patch
+0004-gr39-Remove-all-SWIG-stuff.patch
+0005-gr39-Update-copyright-notices-everywhere.patch
+0006-gr39-Update-main-CMakeLists-with-3.9-requirements-st.patch
+0007-gr39-Switch-to-std-shared_ptr-instead-of-boost-share.patch
+0008-gr39-Add-pybind11-bindings.patch
+0009-Set-3.9-as-supported-GNURadio-version.patch
+# convert-blocks-from-xml-to-yml
+# convert-to-modern-cmake-gnuradio-3.8-patterns
+skip-doxygen-xml-docs
