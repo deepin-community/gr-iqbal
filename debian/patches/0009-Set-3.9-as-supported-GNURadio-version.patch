@@ -1,0 +1,25 @@
+From fbee239a6fb36dd2fb564f6e6a0d393c4bc844db Mon Sep 17 00:00:00 2001
+From: Sylvain Munaut <tnt@246tNt.com>
+Date: Fri, 8 Jan 2021 11:38:03 +0100
+Subject: [PATCH 9/9] Set 3.9 as supported GNURadio version
+
+Signed-off-by: Sylvain Munaut <tnt@246tNt.com>
+---
+ MANIFEST.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/MANIFEST.md b/MANIFEST.md
+index 13280e0..274fc4a 100644
+--- a/MANIFEST.md
++++ b/MANIFEST.md
+@@ -9,6 +9,7 @@ author:
+ copyright_owner:
+     - Sylvain Munaut <tnt@246tNt.com>
+ license: GPLv3
++gr_supported_version: 3.9
+ repo: git://git.osmocom.org/gr-iqbal
+ icon: http://people.osmocom.org/~tnt/stuff/iqbal-icon.png
+ ---
+-- 
+2.30.2
+
